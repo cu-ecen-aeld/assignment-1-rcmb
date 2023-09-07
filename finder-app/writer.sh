@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 if [ $# -lt 2 ]; then
 	echo "$0 <directory path> <string to write>"
 	exit 1
