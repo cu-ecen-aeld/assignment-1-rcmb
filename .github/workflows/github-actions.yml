@@ -12,6 +12,12 @@ jobs:
         container: cuaesd/aesd-autotest:unit-test
         runs-on: self-hosted
         steps:
+          - name: Install jq tool
+            run: |
+              sudo apt-get update
+              sudo apt-get iputils-ping
+              sudo apt-get nano
+              sudo apt-get bind-utils
           - name: Debug
             run: env
           - uses: actions/checkout@v2
