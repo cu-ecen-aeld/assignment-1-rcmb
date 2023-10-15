@@ -1,4 +1,6 @@
 name: assignment-test
+
+
 on: 
     push:
         tags-ignore:
@@ -10,6 +12,8 @@ jobs:
         container: cuaesd/aesd-autotest:unit-test
         runs-on: self-hosted
         steps:
+          - name: Debug
+            run: env
           - uses: actions/checkout@v2
           - name: Checkout submodules
             run : git submodule update --init --recursive
