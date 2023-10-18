@@ -13,6 +13,8 @@ jobs:
         container: czpir/unit-test
         steps:
           - uses: actions/checkout@v2
+          - name: Set permissions
+            run : git config --global --add safe.directory /__w/assignment-1-rcmb/assignment-1-rcmb
           - name: Checkout submodules
             run : git submodule update --init --recursive
           - name: Run unit test
